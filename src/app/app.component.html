@@ -1,0 +1,30 @@
+<div style="text-align: center;">
+  <h1>Progress Bar Sample</h1>
+</div>
+<div>
+  <div *ngFor="let bar of bars">
+    <mat-progress-bar style="display: absolute;" class="bar-element" [color]="primary" [mode]="determinate" [value]="bar">
+    </mat-progress-bar>
+    <div style="text-align: center;">
+      <p>{{bar}}</p>
+    </div>
+    <br/>
+  </div>
+  <div class="progress-grp">
+    <mat-form-field>
+        <mat-select [(value)]="indexValue" placeholder="Selection...">
+          <div *ngFor="let bar of bars; let i = index;">
+              <mat-option value={{i}}>
+                 Select {{i+1}}
+              </mat-option>
+          </div>
+        </mat-select>
+    </mat-form-field>
+    <br/>
+        <div *ngFor="let e of buttons;">
+          <button mat-raised-button color="warn" (click)="clickButton(indexValue,e)">{{e}}</button>
+          <div><br/></div>
+        </div>
+  </div>
+</div>
+

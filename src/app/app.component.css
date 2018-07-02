@@ -1,0 +1,11 @@
+.progress-grp {
+  text-align: center;
+}
+
+.button-grp {
+  display: inline;
+}
+
+.bar-element {
+  height: 2em;
+}
